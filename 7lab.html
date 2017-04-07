@@ -1,0 +1,142 @@
+<html>
+ <head>
+ <title> 7-lab js jquery</title>
+<script type="text/javascript" src="script.js"></script>
+<script src="jquery.js"></script>
+</head>
+<body>
+<style>
+	body { color: mediumspringgreen;
+	background: slategray ;
+
+    background-image: url(./images/foto.png); /
+     
+
+}
+</style>  
+
+<h2> Инфб-14-1k <span class="blink"> экзамен </span><i class="glyphicon glyphicon-pencil"></i> жақындап қалды</h2>
+<ul type="circle">
+  <li> Elubai <blink class="blink"> Aigerim </blink> Kaldybayevna </li>
+</ul>
+<style>
+.blink{
+	color: darkviolet;
+}
+</style>
+<script>
+    function blink_text(){
+    	$('.blink').fadeOut(500);
+    	$('.blink').fadeIn(490);
+    }
+    setInterval(blink_text,800);
+
+</script>
+
+
+
+<input class="yes" type="checkbox" name="check" value="yes">Ия/Жоқ<br>
+<input class="knopka" type="button" name="btn" disabled="disabled" value="келісемін"> 
+
+<script>
+$('.yes').click (function(){
+	if($('.knopka').is (':disabled')){
+		$('.knopka').removeAttr('disabled');
+	}
+	else{ $('.knopka').attr('disabled','disabled')}
+});
+</script>
+
+
+<div>
+<a  class="printPage" href="#">Print</a>
+</div>
+<script >
+	$('a.printPage').click(function(){
+           window.print();
+           return false;
+});
+</script>
+
+5)
+<style type="text/css">
+    body{
+    	color: color: steelblue;
+    }
+ .table_style {
+	width: 500px;
+	margin: 0px auto;
+
+}
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+table tr td{
+	width: 50%;
+	border: 1px solid royalblue;
+	padding: 5px;
+}
+table tr th{
+	border: 1px solid royalblue;
+	padding: 5px;
+}
+.zebra{
+	background-color: cadetblue;
+
+}
+  </style>
+  
+<div class="table_style">
+	<table>
+		<tr>
+			<th>Кызметкер аты</th>
+			<th>Жалақы өсімі</th>
+		</tr>
+		<tr>
+			<td>Айгер</td>
+			<td>3.00</td>
+		</tr>
+		<tr>
+			<td>Таке</td>
+			<td>2.00</td>
+		</tr>
+		<tr>
+			<td>Максат</td>
+			<td>9.00</td>
+		</tr>
+		<tr>
+			<td>Асель</td>
+			<td>6.00</td>
+		</tr>
+		</table>
+</div>
+<script>
+$(document).ready(function(){
+	$("tr:odd").addClass("zebra");
+});
+</script>
+
+3)
+
+<form>
+<label>15 символ енгізу</label>
+<textarea class="textarea" maxlength="15"></textarea>
+  <span class="rchars">15</span> символ қалды
+</form>
+<script>
+var maxLength = 15;
+$('textarea').keyup(function() {
+  var textlen = maxLength - $(this).val().length;
+  $('.rchars').text(textlen);
+});
+</script>
+<style>
+	.textarea{
+		background: plum;
+		color: deeppink;
+
+	}
+</style>
+</body>
+</html>
